@@ -1,0 +1,121 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(to right, #ff5f69, #ffc371);
+}
+
+.container{
+  border: solid 1px ;
+  margin: 250px auto;
+  width: 75%;
+  background: transparent;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+form div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  width: 100%;
+
+}
+
+input{
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 10px;
+  border: solid 1px black;
+}
+
+
+
+#password,
+#confirm-password{
+  background-image: url("Eye\ open.jpg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#password,
+#confirm-password::before{
+  background-image: url(Eye\ close.jpg);
+}
+
+button{
+  background-color: black;
+  color: white;
+  border: none;
+  width: 185px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+img{
+  width: 25px;
+}
+
+.progress-circle{
+  width: 120px;
+  aspect-ratio: 1;
+  background: red;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.progress-circle::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+  radial-gradient(white 55%, transparent 0),
+  conic-gradient(blue 60%, skyblue 0);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(#0000 55%, #000 0);
+  -webkit-mask-mode: alpha;
+
+}
+
+.progress-circle::after{
+  content: "65%";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+.progress{
+  margin-right: 30px;
+}
+
+h3{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.progress-report{
+  background-color: rgb(185, 185, 185);
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.p1{
+  text-decoration: line-through 1px;
+}
+
+.progress-report p{
+  margin-bottom: 7px;
+}

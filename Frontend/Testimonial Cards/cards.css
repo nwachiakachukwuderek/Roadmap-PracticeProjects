@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  border: solid;
+  border-color: black;
+}
+
+.horizontal-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  
+}
+.left-layout {
+  background-color: black;
+  color: white;
+  flex: 1;
+  border-radius: 5px;
+  padding: 5px;
+  border-bottom: 10px;
+}
+.profile-details {
+ display: flex;
+ align-items: center;
+ margin-top: 5px;
+}
+.img-profile-container{
+  width: 100px;
+
+}
+.img-profile {
+  width: 100%;
+  border-radius: 50px;
+  height: 110px;
+}
+
+.profile-text {
+  padding: 10px;
+}
+
+.right-layout {
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding: 15px;
+  height: 270px;
+}
+.profile-container {
+  width: 350px;
+}
+.profile {
+  width: 100%;
+}
+.dodge-profile {
+  background-color: black;
+  color: white;
+  margin-left: 15px;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+}
+.user-name,
+.user-occupation,
+.user-text {
+  margin-top: 10px;
+}
+.user-occupation {
+  color: rgb(96, 96, 96);
+}
+
+.last-horizontal-layout {
+  border-style: solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 6px;
+  margin-left: 6px;
+  border-radius: 7px;
+  padding: 25px;
+  text-align: center;
+}
+
+
+
+.container img {
+  width: 75px;
+  border-radius: 35px;
+  height: 75px;
+  margin-left: 5px; 
+  transition: all ease-in-out 0.5s;
+}
+.container img:hover {
+  width: 25%;
+}

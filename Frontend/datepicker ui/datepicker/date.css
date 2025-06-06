@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: linear-gradient(1366deg,#2e3192, #1bffff);
+}
+
+.main-container{
+  margin: 200px 250px 100px;
+  width: 250px;
+  border: black solid 1px;
+}
+
+.datepicker-icon{
+  display: flex;
+
+}
+
+input{
+  flex: 1;
+}
+
+button img{
+  width: 20px;
+}
+
+.year-picker{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+.arrows{
+  width: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th{
+  border: 1px solid black;
+}

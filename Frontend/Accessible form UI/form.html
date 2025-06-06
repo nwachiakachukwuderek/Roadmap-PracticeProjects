@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="This is a form that can be filled out and is good to do">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta name="keywords" content="HTML, CSS,Accessible Form UI, ">
+  <meta name="author" content="Nwachi Akachukwu">
+  <title>Accessible Form UI</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="container">
+    <form action="check.html" method="get">
+      <div>
+        <label for="name">Full Name:</label>
+        <input type="text" name="name" id="name" required placeholder="What should we call you?">
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Type your email address" required="true">
+      </div>
+      <div class="password">
+        <label for="password">Password:</label>
+        <input type="password" name="password" required placeholder="Type your Password" id="password">
+      </div>
+      <div class="confirm-password">
+        <label for="confirm password">Confirm Password:</label>
+        <input type="password" name="password" required placeholder="Type your Password" id="confirm-password">
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <div class="progress">
+      <div class="progress-circle">
+      
+      </div>
+      <h3>Profile Completeness</h3>
+      <div class="progress-report">
+        <p class="p1">
+          Create Account
+        </p>
+        <p class="p1">
+          Update Roadmap Progress
+        </p>
+        <p class="p1">
+          Setup public Profile
+        </p>
+        <p>
+          Complete your first project
+        </p>
+        <p>
+          Invite your Friends
+        </p><br><br><br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

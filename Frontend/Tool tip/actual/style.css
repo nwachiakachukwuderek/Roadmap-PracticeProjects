@@ -1,0 +1,131 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  align-items: center;
+  position: relative;
+  left: 450px;
+  top: 150px;
+
+}
+
+.dot{
+  background-color: rgb(34, 31, 31);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects::before,
+.projects::after {
+  --tooltip-color: #333;
+  --scale: 0;
+  --arrow-size: 10px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 50ms transform;
+  transform-origin: bottom center;
+}
+
+.projects::before{ 
+  --translate-y: calc(-70% - var(--arrow-size));
+  content: attr(data-tooltips);
+  color: white;
+  background-color: var(--tooltip-color);
+  width: max-content;
+  max-width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px; 
+} 
+
+
+.projects:hover::before,
+.projects:hover::after{
+  --scale: 1;
+}
+
+.projects::after{
+  content: "";
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--tooltip-color);
+  transform-origin: center center;
+}
+
+.home::before,
+.home::after{
+  --scale: 0;
+  --tooltip-color: #333;
+  --arrow-size: 10px;
+  position: absolute;
+  top: -23px;
+  right: 10%;
+  transform: translateX(-50%) translateY(var(--translate-u, 0)) scale(var(--scale));
+}
+.home:hover::before,
+.home:hover::after{
+  --scale: 1;
+}
+
+.home::after{
+  --translate-u: calc(-1.1 * var(--arrow-size));
+  content: "";
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--tooltip-color);
+  transform-origin: center center;
+  left: 10%;
+  right: 250px;
+}
+
+ .home::before{
+  --translate-u: calc(-100% - var(--arrow-size));
+  content: attr(data-tooltip);
+  color: white;
+  background-color: var(--tooltip-color);
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.blog::before,
+.blog::after{
+  --scales: 0;
+  position: absolute;
+  top: -90px;
+  left: -50%;
+  transform: translateX(50%) translateY(100%) scale(var(--scale));
+}
+
+.blog:hover::before{
+  --scales: 1;
+}
+
+ .blog::before{
+  content: attr(data-tooltis);
+  color: white;
+  background-color: #333;
+  width: max-content;
+  max-width: 150%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}  
+
+.blog::after{
+  content: "";
+  border: 10px solid transparent;
+  border-top-color: green;
+  width: 100px;
+}
