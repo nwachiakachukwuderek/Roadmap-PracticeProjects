@@ -1,0 +1,49 @@
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background: white;
+  }
+
+  .container{
+    background: white;
+    color: black;
+    width: 95%;
+    max-width: 600px;
+    border: solid 1px black;
+    margin: 120px auto;
+    height: 400px;
+    display: flexbox;
+    text-align: center;
+    align-content: center;
+    position: relative;
+  }
+
+
+
+  #textarea{
+    width: 400px;
+    height: 150px;
+    border-radius: 20px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+  }
+
+  .red{
+    color: red;
+    border: red 2px solid;
+  }
+
+  .redd{
+    color: red;
+  }
+
+  .characters{
+    position: absolute;
+    right: 19%;
+    bottom: 29%;
+  }
