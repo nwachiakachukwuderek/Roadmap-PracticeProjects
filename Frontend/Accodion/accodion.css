@@ -1,0 +1,41 @@
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .container{
+    border: 1px solid black;
+    margin: 50px auto;
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  .box{
+    margin: 50px auto;
+    width: 70%;
+    min-width: 500px;
+    max-width: 700px;
+  }
+
+  .question{
+    background-color: black;
+    color: white;
+    height: 40px;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .answer{
+    border: 2px solid black;
+    margin-top: 5px;
+    border-radius: 20px;
+    padding: 20px;
+    display: none;
+  }
+
+  .active{
+    display: flex;
+  }
