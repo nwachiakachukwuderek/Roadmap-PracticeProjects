@@ -1,0 +1,33 @@
+.percentage-bar{
+  border: solid 1px gray;
+  border-radius: 10px;
+  position: relative;
+  height: 25px;
+}
+
+.progress{
+  position: absolute;
+  top: 10;
+  right: 20px;
+}
+
+.question-container{
+  border: solid 1px gray;
+  margin-top: 15px;
+  height: 35vh;
+  width: 55vw;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.questions{
+  height: 80%;
+  border: solid 1px gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.toggle-buttons{
+  display: flex;
+  justify-content: space-between;
+}
