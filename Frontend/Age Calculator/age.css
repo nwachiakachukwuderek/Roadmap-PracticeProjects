@@ -12,6 +12,7 @@
     max-width: 500px;
     height: 200px;
     align-content: center;
+    display: block;
   }
 
   h3{
@@ -25,6 +26,9 @@
   input{
     width: 200px;
     padding: 3px;
+    display: block;
+    margin: 10px auto;
+
   }
 
   button{
@@ -34,4 +38,8 @@
     border: none;
     height: 25px;
     margin-top: 10px;
+  }
+
+  .display-text{
+    color: red;
   }
