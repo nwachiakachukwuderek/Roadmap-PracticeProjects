@@ -9,16 +9,19 @@
   <meta name="author" content="Nwachi Akachukwu">
   <title>Age Calculator</title>
   <link rel="stylesheet" href="age.css">
+   <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+  <script src="age.js" defer></script>
 </head>
 <body>
-  <div class="container">
+  <form class="container">
     <h3>Age Calculator</h3>
-    <p class="date">Enter your birth date:</p>
-    <input type="date" name="" id="">
+    <h5>Input Date: dd/mm/yyy </h5>
+    <label for="date">Enter your birth date:</label>
+    <input type="text" name="date" id="date">
     <div><button>Calculate</button></div>
-    <p>gg</p>
-  </div>
-
-  <script src="age.js"></script>
+    <p class="display-text">gg</p>
+  </form>
+  
+  <script type="module" src="age.js"></script>
 </body>
 </html>
