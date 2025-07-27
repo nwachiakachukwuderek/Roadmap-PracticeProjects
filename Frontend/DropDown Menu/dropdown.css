@@ -1,0 +1,47 @@
+:root{
+  --elements-border: 1px black solid;
+  --elements-padding: 15px;
+  --elements-width: 200px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  body{
+    background-color: hsla(72, 28%, 60%, 0.688);
+  }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25vh;
+}
+
+.select-item{
+  border: var(--elements-border);
+  padding: var(--elements-padding);
+  border-radius: 10px;
+  width: var(--elements-width);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.options{
+  border: var(--elements-border);
+  width: var(--elements-width);
+  border-radius: 10px;
+}
+
+.options p {
+  border: var(--elements-border);
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding-bottom: 5px;
+}
