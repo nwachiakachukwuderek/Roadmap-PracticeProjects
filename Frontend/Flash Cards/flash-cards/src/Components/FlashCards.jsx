@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../style.css'
+import '../progressBar.css'
 
 const content = [
   {
@@ -99,14 +100,23 @@ function FlashCards() {
   }
 
   const showQuesAnswer = () => setShowAnswer((prev) => !prev)
+
+  // calculate progress bar rate
+  const progressPercent = ((current + 1) / content.length) * 100
     return (
       <>
       <div className="percentage-bar">
-          <div className='progress'>
-            <span className="remaining">{current + 1} </span>
-            <span>of {content.length}</span>
-          </div>
-          </div>
+        <div className="progress-bar-outer">
+          <div
+            className="progress-bar-inner"
+            style={{ width: `${progressPercent}%` }}
+          ></div>
+        </div>
+        <div className='progress'>
+          <span className="remaining">{current + 1} </span>
+          <span>of {content.length}</span>
+        </div>
+      </div>
 
           <div className="question-container">
             <div className='questions'>

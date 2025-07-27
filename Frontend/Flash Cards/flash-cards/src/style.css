@@ -1,5 +1,4 @@
 .percentage-bar{
-  border: solid 1px gray;
   border-radius: 10px;
   position: relative;
   height: 25px;
@@ -7,8 +6,12 @@
 
 .progress{
   position: absolute;
-  top: 10;
-  right: 20px;
+  top: 0;
+  right: 5px;
+}
+
+span{
+  color: black;
 }
 
 .question-container{
