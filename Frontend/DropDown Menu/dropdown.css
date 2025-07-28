@@ -31,11 +31,15 @@
   margin-bottom: 10px;
 }
 
-.options{
+
+.options {
   border: var(--elements-border);
   width: var(--elements-width);
   border-radius: 10px;
-
+  max-height: 500px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
 }
 
 .options p {
@@ -53,6 +57,8 @@
   border-top: none;
 }
 
-.hide{
-  display: none;
+.hide {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
