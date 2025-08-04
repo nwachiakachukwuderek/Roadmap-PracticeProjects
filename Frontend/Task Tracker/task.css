@@ -1,0 +1,39 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(135deg, #153677, #4e085f);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.text-container{
+  position: relative;
+}
+
+input{
+  width: 350px;
+  height: 40px;
+  border: solid 4px #153677;
+}
+
+button{
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 3px;
+  height: 38px;
+  background-color: #153677;
+  border: none;
+}
+
+
