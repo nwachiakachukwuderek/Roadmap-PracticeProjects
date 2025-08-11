@@ -18,22 +18,67 @@ body{
 
 .text-container{
   position: relative;
+  border: #4e085f 5px solid;
+  width: 400px;
 }
 
 input{
-  width: 350px;
+  width: 100%;
   height: 40px;
-  border: solid 4px #153677;
 }
 
-button{
+.task-button{
   width: 100px;
   position: absolute;
-  top: 0;
-  right: 3px;
-  height: 38px;
-  background-color: #153677;
+  top: -5px;
+  right: -26%;
+  height: 50px;
+  background-color: #4e085f;
   border: none;
 }
 
+.text-colomn{
+  width: 450px;
+  margin-top: 10px;
+  margin-left: 80px;
+  position: relative;
+}
 
+.delete-button{
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+}
+
+p{ 
+  margin-left: 50px;
+}
+
+.task-row p::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width:  28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: 8px;
+
+}
+
+.task-row p.checked{
+  color: black;
+  text-decoration: line-through;
+}
+
+p.checked::before{
+  background-image: url(images/checked.png);
+}
+
+.task-row{
+  display: flex;
+  border-bottom: 3px solid gray;
+  margin-top: 5px;
+}
