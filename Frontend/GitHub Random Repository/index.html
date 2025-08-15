@@ -8,16 +8,20 @@
 </head>
 <body>
   <div class="container">
-    <h2>GitHub Respository Finder</h2>
+    <h2 >GitHub Respository Finder</h2>
 
-    <div class="select-container">
-      <p class="select-language">Select a Language</p>
-      <img class="down-arrow" src="down-arrow.svg">
+      <select id="language-select" class="select-container">
+        <option value="" class="select-language">Choose a language</option>
+      </select>
+
+    <div id="repo-info" class="show-language" style="color: black;">
+      Please select a language
     </div>
-
-    <div>
-      <p class="show-language">Please select a language</p>
+    <div style="text-align:center; margin-top:10px;">
+      <button id="refresh-btn" style="display:none;">Refresh</button>
     </div>
   </div>
+
+  <script src="github.js"></script>
 </body>
 </html>
