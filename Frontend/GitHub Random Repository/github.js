@@ -26,10 +26,10 @@ async function fetchRandomRepo(language) {
     const response = await fetch(url);
     if (!response.ok) throw new Error('GitHub API error');
     const data = await response.json();
-    if (!data.items || data.items.length === 0) {
-      repoInfo.textContent = 'No repositories found for this language.';
-      return;
-    }
+    // if (!data.items || data.items.length === 0) {
+    //   repoInfo.textContent = 'No repositories found for this language.';
+    //   return;
+    // }
     // Pick a random repo from the results
     const randomRepo = data.items[Math.floor(Math.random() * data.items.length)];
     displayRepo(randomRepo);
