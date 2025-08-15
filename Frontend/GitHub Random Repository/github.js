@@ -1,8 +1,6 @@
 
 // List of popular programming languages (can be extended or fetched from a resource)
-const languages = [
-  "JavaScript", "Python", "Java", "C++", "C#", "TypeScript", "PHP", "Ruby", "Go", "Swift", "Kotlin", "Rust", "Scala", "Dart", "Objective-C"
-];
+const languages = ['Python', 'C++', 'C', 'Java', 'C#', 'JavaScript', 'Go', 'Rust', 'TypeScript', 'Swift', 'PHP', 'SQL', 'Kotlin', 'Ruby', 'Dart', 'R', 'Perl', 'Assembly', 'MATLAB', 'Visual Basic', 'Fortran', 'COBOL', 'Lisp', 'Ada', 'Pascal', 'Scheme', 'Prolog', 'Haskell', 'Erlang', 'Scala', 'F#', 'Julia', 'Groovy', 'Lua', 'Bash', 'PowerShell', 'VHDL', 'Verilog', 'Elixir', 'Clojure', 'Crystal', 'OCaml', 'Tcl', 'GDScript', 'Haxe', 'Nim', 'Zig', 'PL/SQL', 'ABAP', 'Smalltalk'];
 
 const languageSelect = document.getElementById('language-select');
 const repoInfo = document.getElementById('repo-info');
