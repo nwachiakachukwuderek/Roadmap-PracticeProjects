@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.add-button{
+  margin-left: 50px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: white;
+  outline: none;
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.subreddit-field{
+  position: fixed;
+  top: 30vh;
+  left: 40vw;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+.hide{
+  display: none;
+}
+
+.subreddit-field h4{
+  margin-bottom: 25px;
+}
+
+.subreddit-field input {
+  width: 220px;
+  margin-bottom: 25px;
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid black;
+  padding: 10px;
+  outline: none;
+}
+
+.subreddit-field button {
+  width: 220px;
+  height: 30px;
+  border-radius: 7px;
+  border: none;
+  outline: black;
+  color: white;
+  background-color: black;
+}
+
+.main-container{
+  display: flex;
+  align-items:  center;
+}
