@@ -108,7 +108,7 @@ async function fetchSubreddit(subreddit) {
     renderLanes();
   }
   try {
-    const url = `https://www.reddit.com/r/${subreddit}.json?limit=15`;
+    const url = `https://corsproxy.io/?url=https://www.reddit.com/r/${subreddit}.json?limit=15`;
     const response = await fetch(url);
     if (!response.ok) throw new Error('Subreddit not found or API error');
     const data = await response.json();

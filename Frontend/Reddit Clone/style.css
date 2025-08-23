@@ -20,8 +20,11 @@
   position: fixed;
   top: 30vh;
   left: 40vw;
-  border: 1px solid black;
-  padding: 30px;
+  border: 1px solid white;
+  padding: 30px;  
+  background-color: black;
+  color: red;
+  z-index: 2;
 }
 
 .hide{
@@ -47,12 +50,28 @@
   height: 30px;
   border-radius: 7px;
   border: none;
-  outline: black;
-  color: white;
-  background-color: black;
+  outline: white;
+  color: black;
+  background-color: white;
+
 }
 
 .main-container{
-  display: flex;
-  align-items:  center;
+  position: relative;
+  z-index: 1;
+}
+
+.content-container{
+  border: 2px black solid;
+  position: relative;
+}
+
+.cancel-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  margin: 10px;
 }
