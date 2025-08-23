@@ -13,24 +13,29 @@ async function fetchData(subreddit) {
     if (!response.ok) throw new Error('There is a problem with the link or website')
     const data = await response.json()
     console.log(subreddit)
-    const redditInfo = data.data.children.data
-    console.log(redditInfo)
+    const redditInfos = data.data.children
 
-    displayReddit(redditInfo)
+    // redditInfos.forEach((redditInfo) => console.log(redditInfo.data.score))
+    console.log(redditInfos)
+    displayReddit(redditInfos)
+
   } catch (err) {
     console.log(err, 'is not working')
   }
 }
 
-function displayReddit(info) {
-  mainContainer.innerHTML = `
-  <h3>${info.title}</h3>
-    <div>
-      <p>${info.selftext}</p>
-      <p>⭐ vote counts: ${info.score}</p>
-      <p>author: ${info.author}</p>
-    </div>
-  `
+function displayReddit(infos) {
+
+  infos.forEach((info) => {
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <h3>${info.data.subreddit}</h3>
+    <a href="${info.data.permalink}">${info.data.title}</a>
+    <span>${info.data.score}</span>
+    <span>${info.data.author}</span>
+    `
+  });
+  mainContainer.appendChild(div)
 }
 
 function renderInput() {
