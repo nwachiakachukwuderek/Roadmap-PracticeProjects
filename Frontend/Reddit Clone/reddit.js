@@ -99,7 +99,7 @@ function createLaneElement(subreddit, posts, loading, error) {
   posts.forEach((post) => {
     const li = document.createElement('li');
     li.innerHTML = `
-      <a href="https://reddit.com${post.permalink}" target="_blank" style="font-weight:bold;text-decoration:none;color:#0079d3;">${post.title}</a><br>
+      <a href="https://reddit.com${post.permalink}" target="_blank">${post.title}</a><br>
       <span style="font-size:13px;">by ${post.author} || ⭐${post.ups}</span>
     `;
     ul.appendChild(li);
