@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(1, 1, 26);
+}
+
+
+.add-button{
+  margin-left: 50px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: white;
+  outline: none;
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.subreddit-field{
+  position: fixed;
+  top: 30vh;
+  left: 40vw;
+  border: 1px solid white;
+  padding: 30px;  
+  background-color: black;
+  color: red;
+  z-index: 2;
+}
+
+.hide{
+  display: none;
+}
+
+.subreddit-field h4{
+  margin-bottom: 25px;
+}
+
+.subreddit-field input {
+  width: 220px;
+  margin-bottom: 25px;
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid black;
+  padding: 10px;
+  outline: none;
+}
+
+.subreddit-field button {
+  width: 220px;
+  height: 30px;
+  border-radius: 7px;
+  border: none;
+  outline: white;
+  color: black;
+  background-color: white;
+
+}
+
+.main-container{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 3em;
+  color: gray;
+  margin: 25px;
+  margin-top: 40px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+
+h3{
+  color: rgb(216, 69, 15);
+  border-bottom: 1px solid gray;
+  padding: 15px;
+}
+
+.content-container{
+  position: relative;
+  border: 1px solid rgb(7, 7, 61);
+  background-color: rgb(7, 7, 61);
+  border-radius: 20px;
+}
+
+.cancel-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid;
+  margin: 10px;
+  background-color:  rgb(7, 7, 61);
+  color: gray;
+
+}
+
+ul li{
+  list-style-type: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgb(14, 14, 100);
+}
