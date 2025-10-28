@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 
 const DEFAULTS = {
   work: 25 * 60,        // 25 minutes
@@ -23,7 +23,7 @@ function MainTimer() {
   const [sessionType, setSessionType] = useState(SESSION_TYPES.WORK);
   const [secondsLeft, setSecondsLeft] = useState(DEFAULTS.work);
   const [isRunning, setIsRunning] = useState(false);
-  // const [workSessions, setWorkSessions] = useState(0);
+  const [workSessions, setWorkSessions] = useState(0);
 
   const intervalRef = useRef(null);
 
@@ -34,7 +34,7 @@ function MainTimer() {
       setSecondsLeft(prev => {
         if (prev <= 1) {
           clearInterval(intervalRef.current);
-          // handleSessionEnd();
+          handleSessionEnd();
           return 0;
         }
         return prev - 1;
@@ -42,27 +42,27 @@ function MainTimer() {
     }, 1000);
     return () => clearInterval(intervalRef.current);
 
-  }, [isRunning, sessionType]);
+  }, [isRunning, handleSessionEnd]);
 
-  // // Handle session end logic
-  // function handleSessionEnd() {
-  //   // Play sound here if desired
-  //   if (sessionType === SESSION_TYPES.WORK) {
-  //     const newWorkSessions = workSessions + 1;
-  //     setWorkSessions(newWorkSessions);
-  //     if (newWorkSessions % 4 === 0) {
-  //       setSessionType(SESSION_TYPES.LONG);
-  //       setSecondsLeft(DEFAULTS.longBreak);
-  //     } else {
-  //       setSessionType(SESSION_TYPES.SHORT);
-  //       setSecondsLeft(DEFAULTS.shortBreak);
-  //     }
-  //   } else {
-  //     setSessionType(SESSION_TYPES.WORK);
-  //     setSecondsLeft(DEFAULTS.work);
-  //   }
-  //   setIsRunning(false);
-  // }
+  // Handle session end logic
+  const handleSessionEnd = useCallback(() => {
+    // Play sound here if desired
+    if (sessionType === SESSION_TYPES.WORK) {
+      const newWorkSessions = workSessions + 1;
+      setWorkSessions(newWorkSessions);
+      if (newWorkSessions % 4 === 0) {
+        setSessionType(SESSION_TYPES.LONG);
+        setSecondsLeft(DEFAULTS.longBreak);
+      } else {
+        setSessionType(SESSION_TYPES.SHORT);
+        setSecondsLeft(DEFAULTS.shortBreak);
+      }
+    } else {
+      setSessionType(SESSION_TYPES.WORK);
+      setSecondsLeft(DEFAULTS.work);
+    }
+    setIsRunning(false);
+  }, [sessionType, workSessions]);
 
   // Button handlers
   function startTimer() {
@@ -142,9 +142,9 @@ function MainTimer() {
             Reset
           </button>
         </div>
-        {/* <div className="mt-8 text-lg">
+        <div className="mt-8 text-lg">
           Work sessions completed: <span className="font-bold">{workSessions}</span>
-        </div> */}
+        </div>
       </div>
     </div>
   );
