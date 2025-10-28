@@ -1,12 +1,15 @@
 // import { useState } from 'react'
 import './App.css'
+import Header from './components/Header'
+import MainTimer from './components/MainTimer'
 
 function App() {
 
   return (
     <>
-     <div>
-      <h1>Something first</h1>
+     <div className='max-w-sm mx-auto'>
+      <Header />
+      <MainTimer />
      </div>
     </>
   )
