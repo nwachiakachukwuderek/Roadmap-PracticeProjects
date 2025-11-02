@@ -9,3 +9,4 @@ https://roadmap.sh/projects/cookie-consent, https://roadmap.sh/projects/restrict
 https://roadmap.sh/projects/accordion, https://roadmap.sh/projects/age-calculator
 https://roadmap.sh/projects/flash-cards, https://roadmap.sh/projects/custom-dropdown, https://roadmap.sh/projects/task-tracker-js
 https://roadmap.sh/projects/github-random-repo,https://roadmap.sh/projects/reddit-client, https://roadmap.sh/projects/temperature-converter
+https://roadmap.sh/projects/pomodoro-timer,

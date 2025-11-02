@@ -8,7 +8,6 @@ function App() {
   return (
     <>
      <div className='max-w-sm mx-auto'>
-      <Header />
       <MainTimer />
      </div>
     </>

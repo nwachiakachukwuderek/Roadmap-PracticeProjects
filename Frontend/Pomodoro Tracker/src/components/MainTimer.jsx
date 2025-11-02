@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 
 const DEFAULTS = {
-  work: 25 * 60,        // 25 minutes
+  work: 30 * 60,        // 25 minutes
   shortBreak: 5 * 60,   // 5 minutes
   longBreak: 15 * 60,   // 15 minutes
 };
@@ -10,7 +10,7 @@ function formatTime(secs) {
   const m = String(Math.floor(secs / 60)).padStart(2, '0');
   const s = String(secs % 60).padStart(2, '0');
   console.log(m, s)
-  return `${m}:${s}`;
+  return `${m}:${s}`
 }
 
 const SESSION_TYPES = {
@@ -42,7 +42,7 @@ function MainTimer() {
     }, 1000);
     return () => clearInterval(intervalRef.current);
 
-  }, [isRunning, handleSessionEnd]);
+  });
 
   // Handle session end logic
   const handleSessionEnd = useCallback(() => {
