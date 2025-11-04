@@ -126,7 +126,7 @@ function FlashCards() {
             <div className='toggle-buttons'>
               <button onClick={prevButton} disabled={current === 0}>Previous</button>
               <button onClick={showQuesAnswer}>Show Answer</button>
-              <button onClick={nextButton} disabled={current === content.length - 1} >Next</button>
+              <button onClick={nextButton} disabled={current === 19} >Next</button>
             </div>
       </div>
       </>

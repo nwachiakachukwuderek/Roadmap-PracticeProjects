@@ -1,9 +1,9 @@
-import { useState } from 'react'
+
 import './App.css'
 import FlashCards from './Components/FlashCards'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
