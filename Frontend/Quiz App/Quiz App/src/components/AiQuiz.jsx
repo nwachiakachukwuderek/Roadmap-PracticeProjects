@@ -1,20 +1,22 @@
-import { useEffect, useState, useRef } from 'react';
+import { useState, useEffect, useRef} from 'react';
 import quizData from './quizData.json'
 
 function AiQuiz() {
   const TOTAL = quizData.length;
   const [started, setStarted] = useState(false);
-  const [index, setIndex] = useState(0); // zero-based
-  const [selected, setSelected] = useState(null);
+  const [index, setIndex] = useState(0); // zero-based;
+  const [_selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);
   const [score, setScore] = useState(0);
+
+  const q = quizData[index];
   const [results, setResults] = useState([]); // { id, selected, correct, timedOut }
   const [timeLeft, setTimeLeft] = useState(60);
   const timerRef = useRef(null);
 
   useEffect(() => {
     if (!started) return;
-    resetTimer();5
+    resetTimer();
     return () => clearInterval(timerRef.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, started]);
@@ -47,7 +49,6 @@ function AiQuiz() {
 
   function handleSelect(option) {
     if (answered) return;
-    const q = quizData[index];
     const correct = q.correctAnswer;
     const isCorrect = option === correct;
     setSelected(option);
@@ -77,7 +78,6 @@ function AiQuiz() {
   }
 
   function handleTimeout() {
-    const q = quizData[index];
     clearInterval(timerRef.current);
     setAnswered(true);
     setSelected(null);
@@ -184,7 +184,6 @@ function AiQuiz() {
   }
 
   // question card
-  const q = quizData[index];
   const displayNumber = index + 1;
 
   return (
@@ -202,15 +201,6 @@ function AiQuiz() {
 
           <div>
             {q.options.map((opt) => {
-              // decide button color after answered
-              let bg = '#f0f0f0';
-              if (answered) {
-                const correct = q.correctAnswer;
-                if (opt === selected && opt === correct) bg = '#4caf50'; // selected correct
-                else if (opt === selected && opt !== correct) bg = '#f44336'; // selected wrong
-                else if (opt === correct) bg = '#4caf50'; // reveal correct among options
-                else bg = '#eee';
-              }
               return (
                 <button
                   key={opt}
