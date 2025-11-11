@@ -10,3 +10,4 @@ https://roadmap.sh/projects/accordion, https://roadmap.sh/projects/age-calculato
 https://roadmap.sh/projects/flash-cards, https://roadmap.sh/projects/custom-dropdown, https://roadmap.sh/projects/task-tracker-js
 https://roadmap.sh/projects/github-random-repo,https://roadmap.sh/projects/reddit-client, https://roadmap.sh/projects/temperature-converter
 https://roadmap.sh/projects/pomodoro-timer, https://roadmap.sh/projects/quiz-app
+https://roadmap.sh/projects/weather-app, 
