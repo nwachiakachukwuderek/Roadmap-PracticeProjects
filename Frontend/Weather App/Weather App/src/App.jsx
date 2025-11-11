@@ -8,6 +8,7 @@ function App() {
   const [inputValue, setInputValue] = useState('nigeria');
   const [submittedValue, setSubmittedValue] = useState('');
 
+  console.log(error)
   useEffect(() => {
     
     const fetchData = async () => {
