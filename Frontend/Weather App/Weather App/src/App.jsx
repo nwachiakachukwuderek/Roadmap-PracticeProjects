@@ -43,6 +43,7 @@ function App() {
     fetchData();
 
     //the initial render, similar to 'componentDidMount' in class componenets
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [submittedValue])
 
   function handleChange(e) {
